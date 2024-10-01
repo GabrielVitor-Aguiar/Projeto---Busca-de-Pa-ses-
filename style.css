@@ -1,0 +1,149 @@
+/* Estilo Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+/* Rodapé */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Estilo para o Main */
+main {
+    padding: 20px;
+    margin-bottom: 60px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo em telas maiores */
+}
+
+/* Container dos Filtros */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 10px;
+    gap: 10px;
+}
+
+.filter-container select,
+.filter-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.filter-container select:hover,
+.filter-container input:hover {
+    background-color: #e6e6e6;
+}
+
+.filter-container input {
+    flex: 1 1 auto;
+    max-width: 300px;
+}
+
+.filter-container select {
+    flex: 0 1 180px;
+}
+
+/* Lista de Países */
+.country-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Cartão de País */
+.country-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.country-card img {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.country-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.country-card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.country-card a:hover {
+    color: #0056b3;
+}
+
+.country-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-container select,
+    .filter-container input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .country-list {
+        grid-template-columns: 1fr;
+    }
+}

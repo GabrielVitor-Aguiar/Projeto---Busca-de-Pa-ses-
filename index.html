@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore a lista de países por região, população e área.">
+    <title>Lista de Países</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Exploração de Países</h2>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="list-title">
+            <h1 id="list-title">Lista de Países</h1>
+            <div class="filter-container">
+                <select id="region-filter" aria-label="Filtrar por região">
+                    <option value="">Todas as Regiões</option>
+                    <option value="Africa">África</option>
+                    <option value="Americas">América</option>
+                    <option value="Asia">Ásia</option>
+                    <option value="Europe">Europa</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+                <select id="subregion-filter" aria-label="Filtrar por sub-região">
+                    <option value="">Todas as Sub-regiões</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Buscar país..." aria-label="Buscar país">
+                <select id="population-filter" aria-label="Filtrar por população">
+                    <option value="">Todas as Populações</option>
+                    <option value="<1M">Menos de 1M</option>
+                    <option value="1M-10M">1M a 10M</option>
+                    <option value="10M-100M">10M a 100M</option>
+                    <option value=">100M">Mais de 100M</option>
+                </select>
+                <select id="area-filter" aria-label="Filtrar por área">
+                    <option value="">Todas as Áreas</option>
+                    <option value="<100km²">Menos de 100 km²</option>
+                    <option value="100-1000km²">100 a 1000 km²</option>
+                    <option value="1000-10000km²">1000 a 10000 km²</option>
+                    <option value=">10000km²">Mais de 10000 km²</option>
+                </select>
+            </div>
+            <div id="country-list" class="country-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Exploração de Países. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+  
